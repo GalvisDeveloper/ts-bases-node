@@ -1,4 +1,5 @@
-const buildPerson = ({ birthDate, name }) => {
+
+export const buildPerson = (birthDate: string, name: string) => {
 	return {
 		id: new Date().getTime(),
 		name,
@@ -7,4 +8,3 @@ const buildPerson = ({ birthDate, name }) => {
 	};
 };
 
-module.exports = { buildPerson };
