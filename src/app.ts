@@ -1,4 +1,4 @@
-import { buildMakePerson, buildPerson, destructuring02, emailTemplate, getPokemonById, getUserById } from "./fundations";
+import { buildMakePerson, buildPerson, emailTemplate, getPokemonById, getUserById, someone } from "./fundations";
 import { assignId, buildLogger, getAge, httpClientPlugin } from "./plugins";
 
 // #######################      Plugins
@@ -20,7 +20,7 @@ httpClientPlugin.get('https://pokeapi.co/api/v2/pokemon/1').then(res => console.
 console.log(emailTemplate)
 
 // -- Destructuring
-console.log(destructuring02)
+console.log(someone)
 
 // -- Callbacks
 getUserById(1).then((user) => console.log(user)).catch((error) => console.log(error));
