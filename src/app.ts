@@ -23,7 +23,13 @@ console.log(emailTemplate)
 console.log(someone)
 
 // -- Callbacks
-getUserById(1).then((user) => console.log(user)).catch((error) => console.log(error));
+
+getUserById(1, (err, user) => {
+    if (err) {
+        console.log(err)
+    }
+    console.log('User found ', user)
+});
 
 // -- Factory Function
 console.log(buildPerson('1995-05-05', 'Cristian'))
