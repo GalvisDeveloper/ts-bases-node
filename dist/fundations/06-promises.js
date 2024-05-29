@@ -15,7 +15,9 @@ const getPokemonById = (id) => __awaiter(void 0, void 0, void 0, function* () {
     if (!id) {
         throw Error('Id is required');
     }
-    const response = yield plugins_1.httpClientPlugin.get(`https://pokeapi.co/api/v2/pokemon/${id}`);
-    return response;
+    const { name } = yield plugins_1.httpClientPlugin.get(`https://pokeapi.co/api/v2/pokemon/${id}`);
+    if (!name)
+        throw Error(`Pokemon with id ${id} not found`);
+    return name;
 });
 exports.getPokemonById = getPokemonById;

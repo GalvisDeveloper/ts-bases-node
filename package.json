@@ -4,7 +4,7 @@
   "description": "Desarrollando en node",
   "main": "app.js",
   "scripts": {
-    "build": "rimraf ./dist && tsc",
+    "build": "npm run test && rimraf ./dist && tsc",
     "start": "npm run build && node dist/app.js",
     "dev": "nodemon",
     "test": "jest",
